@@ -20,17 +20,17 @@
           if (!href) return;
           if (href.startsWith("https://uk.wikipedia.org/wiki/")) {
             const t = href.split("/wiki/")[1];
-            a.onclick = e => { e.preventDefault(); location.hash = decodeURIComponent(t); };
+            a.onclick = e => { e.preventDefault(); location.hash = "#" + decodeURIComponent(t); };
             return;
           }
           if (href.startsWith("/wiki/")) {
             const t = href.slice(6);
-            a.onclick = e => { e.preventDefault(); location.hash = decodeURIComponent(t); };
+            a.onclick = e => { e.preventDefault(); location.hash = "#" + decodeURIComponent(t); };
             return;
           }
           if (href.startsWith("/w/index.php?title=")) {
             const t = href.split("title=")[1].split("&")[0];
-            a.onclick = e => { e.preventDefault(); location.hash = decodeURIComponent(t); };
+            a.onclick = e => { e.preventDefault(); location.hash = "#" + decodeURIComponent(t); };
           }
         });
 
