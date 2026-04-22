@@ -14,11 +14,27 @@ async function load(title) {
     const root = document.getElementById("wiki");
     root.innerHTML = html;
 
-    root.querySelectorAll("a[href^='/wiki/']").forEach(a => {
-      const t = a.getAttribute("href").replace("/wiki/", "");
-      a.onclick = e => {
-        e.preventDefault();
-        location.hash = decodeURIComponent(t);
+   
+root.querySelectorAll("a[href]").forEach(a => {
+  const href = a.getAttribute("href");
+
+  if (href.startsWith("/wiki/")) {
+    const t = href.slice(6);
+    a.onclick = e => {
+      e.preventDefault();
+      location.hash = decodeURIComponent(t);
+    };
+  }
+
+  if (href.startsWith("/w/index.php?title=")) {
+    const t = href.split("title=")[1].split("&")[0];
+    a.onclick = e => {
+      e.preventDefault();
+      location.hash = decodeURIComponent(t);
+    };
+  }
+});
+
       };
     });
 
