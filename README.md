@@ -1,3 +1,5 @@
+#mediapiki
+
 <div id="wiki"></div>
 
 <script>
