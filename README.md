@@ -71,4 +71,9 @@ body {
 html, body {
   height: 100%;
 }
+footer,
+.site-footer,
+.github-footer {
+  display: none !important;
+}
 </style>
