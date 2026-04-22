@@ -63,3 +63,12 @@ root.querySelectorAll("a[href]").forEach(a => {
 window.addEventListener("hashchange", () => load(page()));
 load(page());
 </script>
+
+<style>
+body {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+</style>
