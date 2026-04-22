@@ -29,7 +29,7 @@ async function load(title) {
         a.onclick = e => { e.preventDefault(); location.hash = decodeURIComponent(t); };
       }
     });
-    document.title = title;
+    document.title = #title;
   } catch {
     document.getElementById("wiki").innerHTML = "";
   }
