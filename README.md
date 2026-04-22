@@ -11,7 +11,6 @@ async function load(title) {
     const root = document.getElementById("wiki");
     root.innerHTML = html;
     root.querySelector("base")?.remove();
-
     root.querySelectorAll("a[href]").forEach(a => {
       const href = a.getAttribute("href");
       if (!href) return;
@@ -30,7 +29,6 @@ async function load(title) {
         a.onclick = e => { e.preventDefault(); location.hash = decodeURIComponent(t); };
       }
     });
-
     document.title = title;
   } catch {
     document.getElementById("wiki").innerHTML = "";
