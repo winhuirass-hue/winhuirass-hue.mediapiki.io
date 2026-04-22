@@ -4,7 +4,7 @@
 const API = "https://uk.wikipedia.org/api/rest_v1/page/html/";
 
 function page() {
-  return decodeURIComponent(location.hash.slice(1)) || "Україна";
+  return decodeURIComponent(location.hash.slice(1)) || "Головна_сторінка";
 }
 
 async function load(title) {
