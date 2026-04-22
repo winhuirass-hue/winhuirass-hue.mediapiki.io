@@ -1,3 +1,4 @@
+<head><title>Вікіпедія</title></head>
 <div id="wiki"></div>
 <script>
 const API = "https://uk.wikipedia.org/api/rest_v1/page/html/";
@@ -29,7 +30,7 @@ async function load(title) {
         a.onclick = e => { e.preventDefault(); location.hash = decodeURIComponent(t); };
       }
     });
-    document.title = #title;
+    document.title = title;
   } catch {
     document.getElementById("wiki").innerHTML = "";
   }
